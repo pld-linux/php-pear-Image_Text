@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - Comfortable processing of texts in images
 Summary(pl):	%{_pearname} - Komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
-Version:	0.2
+Version:	0.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	36510db8fd1ceba02095ac8d768c5fd9
+# Source0-md5:	3ba50d68cd916b9fd3c63dabe286200e
 URL:		http://pear.php.net/package/Image_Text/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -48,17 +48,14 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 install %{_pearname}-%{version}/%{_class}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_class}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{doc,example}
-%dir %{php_pear_dir}/%{_class}/%{_subclass}
+%doc %{_pearname}-%{version}/{example,make_doc{book,html}.sh}
 %{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/*.php
