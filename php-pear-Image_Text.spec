@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Image
-%define         _subclass       Text
+%define		_class		Image
+%define		_subclass	Text
 %define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - Comfortable processing of texts in images
-Summary(pl):	%{_pearname} - Komfortowe przetwarzanie tekstu w obrazkach
+Summary:	%{_pearname} - comfortable processing of texts in images
+Summary(pl):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
 Version:	0.4pl1
 Release:	1
