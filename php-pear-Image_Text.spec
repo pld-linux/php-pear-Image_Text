@@ -20,20 +20,28 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This class allows you to add text to dynamic generated images more comfortable.
-It allows you to process multiline text and manipulate:
+This class allows you to add text to dynamic generated images more
+comfortable. It allows you to process multiline text and manipulate:
 - Border
 - Shading
 - Aligniment
-Another nice feature is to let the class measurize your text in respect to font size and
-line splitting to fit a given text box.
+Another nice feature is to let the class measurize your text in respect
+to font size and line splitting to fit a given text box.
 
 This class has in PEAR status: %{_status}.
 
-#%description -l pl
-#
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl
+Ta klasa pozwala na dodanie tekstu do dynamicznie generowanych obrazków
+w sposób bardziej komfortowy ni¿ dotychczas. Mo¿liwe jest przetwarzanie
+teksów wielolinijkowych i manipulacjê:
+- obramowaniem
+- cieniem
+- ustawieniem
+Inn± ciekaw± cech± jest pozwolenie klasie na zmierzenie tekstu w
+zale¿no¶ci od rozmiaru czcionki i dzielenie go na linie, aby zmie¶ci³
+siê w podanym polu tekstowym.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
