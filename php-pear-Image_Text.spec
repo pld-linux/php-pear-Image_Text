@@ -24,19 +24,19 @@ This class allows you to add text to dynamic generated images more
 comfortable. It allows you to process multiline text and manipulate:
 - Border
 - Shading
-- Aligniment
+- Alignment
 Another nice feature is to let the class measurize your text in respect
 to font size and line splitting to fit a given text box.
 
 This class has in PEAR status: %{_status}.
 
 %description -l pl
-Ta klasa pozwala na dodanie tekstu do dynamicznie generowanych obrazków
-w sposób bardziej komfortowy ni¿ dotychczas. Mo¿liwe jest przetwarzanie
-teksów wielolinijkowych i manipulacjê:
+Ta klasa pozwala na dodanie tekstu do dynamicznie generowanych
+obrazków w sposób bardziej komfortowy ni¿ dotychczas. Mo¿liwe jest
+przetwarzanie tekstów wielolinijkowych i manipulowanie:
 - obramowaniem
 - cieniem
-- ustawieniem
+- ustawieniem.
 Inn± ciekaw± cech± jest pozwolenie klasie na zmierzenie tekstu w
 zale¿no¶ci od rozmiaru czcionki i dzielenie go na linie, aby zmie¶ci³
 siê w podanym polu tekstowym.
