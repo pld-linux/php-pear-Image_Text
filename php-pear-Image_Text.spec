@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Image
 %define		_subclass	Text
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - comfortable processing of texts in images
