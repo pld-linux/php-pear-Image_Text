@@ -28,7 +28,7 @@ comfortable. It allows you to process multiline text and manipulate:
 Another nice feature is to let the class measurize your text in respect
 to font size and line splitting to fit a given text box.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Ta klasa pozwala na dodanie tekstu do dynamicznie generowanych
