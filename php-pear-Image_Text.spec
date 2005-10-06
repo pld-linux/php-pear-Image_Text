@@ -7,12 +7,14 @@
 Summary:	%{_pearname} - comfortable processing of texts in images
 Summary(pl):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
-Version:	0.5.0
-Release:	3
+Version:	0.5.2
+%define	_beta beta2
+%define	_rel 1
+Release:	0.%{_beta}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	84121838f5d3582225a64785ec63a4a5
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_beta}.tgz
+# Source0-md5:	f9f808c22cf1076e1e9bce8d59ff1251
 URL:		http://pear.php.net/package/Image_Text/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-gd
@@ -51,7 +53,6 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
 %pear_package_install
-cp -a ./%{_bindir}/* $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,6 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %doc docs/%{_pearname}/example
-%attr(755,root,root) %{_bindir}/*
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
