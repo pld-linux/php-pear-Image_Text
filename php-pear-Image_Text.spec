@@ -9,7 +9,7 @@ Summary(pl):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
 Version:	0.5.2
 %define	_beta beta2
-%define	_rel 1
+%define	_rel 2
 Release:	0.%{_beta}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
