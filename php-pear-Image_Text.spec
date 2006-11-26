@@ -4,12 +4,12 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
+%define	_beta beta2
+%define	_rel 3
 Summary:	%{_pearname} - comfortable processing of texts in images
 Summary(pl):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
 Version:	0.5.2
-%define	_beta beta2
-%define	_rel 2
 Release:	0.%{_beta}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -19,7 +19,7 @@ URL:		http://pear.php.net/package/Image_Text/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-gd
+Requires:	php(gd)
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
