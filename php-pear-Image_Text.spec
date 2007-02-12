@@ -7,7 +7,7 @@
 %define	_beta beta2
 %define	_rel 3
 Summary:	%{_pearname} - comfortable processing of texts in images
-Summary(pl):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
+Summary(pl.UTF-8):   %{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
 Version:	0.5.2
 Release:	0.%{_beta}.%{_rel}
@@ -35,16 +35,16 @@ to font size and line splitting to fit a given text box.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Ta klasa pozwala na dodanie tekstu do dynamicznie generowanych
-obrazkÛw w sposÛb bardziej komfortowy niø dotychczas. Moøliwe jest
-przetwarzanie tekstÛw wielolinijkowych i manipulowanie:
+obrazk√≥w w spos√≥b bardziej komfortowy ni≈º dotychczas. Mo≈ºliwe jest
+przetwarzanie tekst√≥w wielolinijkowych i manipulowanie:
 - obramowaniem
 - cieniem
 - ustawieniem.
-Inn± ciekaw± cech± jest pozwolenie klasie na zmierzenie tekstu w
-zaleøno∂ci od rozmiaru czcionki i dzielenie go na linie, aby zmie∂ci≥
-siÍ w podanym polu tekstowym.
+InnƒÖ ciekawƒÖ cechƒÖ jest pozwolenie klasie na zmierzenie tekstu w
+zale≈ºno≈õci od rozmiaru czcionki i dzielenie go na linie, aby zmie≈õci≈Ç
+siƒô w podanym polu tekstowym.
 
 Ta klasa ma w PEAR status: %{_status}.
 
