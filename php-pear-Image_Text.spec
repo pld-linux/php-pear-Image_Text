@@ -4,16 +4,16 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
-%define	_beta beta
-%define	_rel 2
+%define		subver	beta
+%define		rel		3
 Summary:	%{_pearname} - comfortable processing of texts in images
 Summary(pl.UTF-8):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
 Version:	0.6.0
-Release:	0.%{_beta}.%{_rel}
+Release:	0.%{subver}.%{rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_beta}.tgz
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
 # Source0-md5:	11ef956fc2a93fd359a80bde7fc0e8e8
 URL:		http://pear.php.net/package/Image_Text/
 BuildRequires:	php-pear-PEAR
@@ -48,8 +48,27 @@ się w podanym polu tekstowym.
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
+Group:		Development/Languages/PHP
+AutoReq:	no
+Requires:	%{name} = %{version}-%{release}
+AutoProv:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl.UTF-8
+Testy dla PEAR::%{_pearname}.
+
 %prep
 %pear_package_setup
+
+# tests -> tests/%{_pearname}
+install -d ./%{php_pear_dir}/tests/.tmp
+mv ./%{php_pear_dir}/tests/{*,.tmp}
+mv ./%{php_pear_dir}/tests/{.tmp,%{_pearname}}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -65,3 +84,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/%{_pearname}/example
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/%{_pearname}
+%{php_pear_dir}/data/Image_Text/tests/Vera.ttf
