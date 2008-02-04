@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 %define		subver	beta
-%define		rel		3
+%define		rel		4
 Summary:	%{_pearname} - comfortable processing of texts in images
 Summary(pl.UTF-8):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
