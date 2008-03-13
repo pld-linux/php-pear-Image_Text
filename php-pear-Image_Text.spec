@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 %define		subver	beta
-%define		rel		4
+%define		rel		5
 Summary:	%{_pearname} - comfortable processing of texts in images
 Summary(pl.UTF-8):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
@@ -52,8 +52,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
+Requires:	fonts-TTF-bitstream-vera
+AutoReq:	no
 AutoProv:	no
 
 %description tests
@@ -70,10 +71,17 @@ install -d ./%{php_pear_dir}/tests/.tmp
 mv ./%{php_pear_dir}/tests/{*,.tmp}
 mv ./%{php_pear_dir}/tests/{.tmp,%{_pearname}}
 
+# use system Vera.ttf
+sed -i -e "s,'Vera.ttf','/usr/share/fonts/TTF/Vera.ttf'," usr/share/pear/tests/Image_Text/TextTest.php
+sed -i -e "s,'Vera.ttf','/usr/share/fonts/TTF/Vera.ttf'," docs/Image_Text/example/example.php
+sed -i -e 's,"./Vera.ttf","/usr/share/fonts/TTF/Vera.ttf",' docs/Image_Text/example/example.php
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
 %pear_package_install
+
+rm -f $RPM_BUILD_ROOT%{php_pear_dir}/data/Image_Text/tests/Vera.ttf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -88,4 +96,3 @@ rm -rf $RPM_BUILD_ROOT
 %files tests
 %defattr(644,root,root,755)
 %{php_pear_dir}/tests/%{_pearname}
-%{php_pear_dir}/data/Image_Text/tests/Vera.ttf
