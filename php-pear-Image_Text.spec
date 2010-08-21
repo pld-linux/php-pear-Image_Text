@@ -3,9 +3,8 @@
 %define		_subclass	Text
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
 %define		subver	beta
-%define		rel		5
+%define		rel		6
 Summary:	%{_pearname} - comfortable processing of texts in images
 Summary(pl.UTF-8):	%{_pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{_pearname}
@@ -19,7 +18,7 @@ URL:		http://pear.php.net/package/Image_Text/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php(gd)
+Requires:	php-gd
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -54,8 +53,8 @@ Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 Requires:	fonts-TTF-bitstream-vera
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
