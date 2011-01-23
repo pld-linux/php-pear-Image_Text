@@ -63,9 +63,6 @@ install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-# tests should not be packaged
-%{__rm} -r $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
