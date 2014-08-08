@@ -1,11 +1,11 @@
---- Image_Text-0.6.0/usr/share/pear/Image/Text.php~	2010-11-16 16:49:01.000000000 +0200
-+++ Image_Text-0.6.0/usr/share/pear/Image/Text.php	2010-11-16 16:50:25.906078543 +0200
-@@ -230,7 +230,7 @@
-             'enable_alpha'      => false,
+--- Image_Text-0.7.0/usr/share/pear/Image/Text.php~	2014-08-08 23:11:23.000000000 +0300
++++ Image_Text-0.7.0/usr/share/pear/Image/Text.php	2014-08-08 23:12:12.606734506 +0300
+@@ -178,7 +178,7 @@
+         'enable_alpha' => false,
  
-             // font settings
--            'font_path'         => "./",
-+            'font_path'         => "/usr/share/fonts/TTF/",
-             'font_file'         => null,
-             'font_size'         => 2,
-             'line_spacing'      => 0.5,
+         // font settings
+-        'font_path' => "./",
++        'font_path' => '/usr/share/fonts/TTF/',
+         'font_file' => null,
+         'font_size' => 2,
+         'line_spacing' => 0.5,
