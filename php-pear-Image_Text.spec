@@ -1,7 +1,6 @@
 %define		status		beta
 %define		pearname	Image_Text
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - comfortable processing of texts in images
 Summary(pl.UTF-8):	%{pearname} - komfortowe przetwarzanie tekstu w obrazkach
 Name:		php-pear-%{pearname}
